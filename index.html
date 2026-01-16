@@ -9,8 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
     <style>
         :root {
             --background-image: url('backgroundnost.png');
@@ -159,14 +157,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            letter-spacing: 1px;
         }
-
-        .link-item i { margin-right: 12px; font-size: 1.2rem; }
 
         .link-item:hover {
             background: rgba(255, 255, 255, 0.18);
             transform: translateY(-2px);
             border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .bg-circle {
@@ -206,15 +204,9 @@
         <p class="description">ceo of chillzone • vceo of windhc.pl</p>
 
         <div class="links">
-            <a href="https://www.youtube.com/@N0STOFC" class="link-item" target="_blank">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
-            <a href="https://www.instagram.com/pleudier/" class="link-item" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="https://discord.gg/chillzoneof" class="link-item" target="_blank">
-                <i class="fab fa-discord"></i> Discord - ChillZone
-            </a>
+            <a href="https://www.youtube.com/@N0STOFC" class="link-item" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/pleudier/" class="link-item" target="_blank">Instagram</a>
+            <a href="https://discord.gg/chillzoneof" class="link-item" target="_blank">Discord - ChillZone</a>
         </div>
     </div>
 
@@ -223,7 +215,6 @@
         const btn = document.getElementById('musicBtn');
         const enterScreen = document.getElementById('enter-screen');
 
-        // Funkcja wywoływana po kliknięciu ekranu powitalnego
         function startPage() {
             music.play().catch(e => console.log("Wymagana interakcja"));
             btn.innerHTML = '🔊';
@@ -235,7 +226,6 @@
             }, 1000);
         }
 
-        // Funkcja przycisku w lewym górnym rogu
         function toggleMusic() {
             if (music.paused) {
                 music.play();
