@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link in Bio - Glassmorphism</title>
+    <style>
+        /* 1. Tło strony - najlepiej gradient lub abstrakcyjne kształty */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(45deg, #f39c12, #8e44ad, #2980b9);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* 2. Główny kontener (Karta) */
+        .glass-container {
+            width: 90%;
+            max-width: 400px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1); /* Przezroczystość */
+            backdrop-filter: blur(15px); /* Efekt rozmycia szkła */
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            text-align: center;
+        }
+
+        /* 3. Zdjęcie profilowe */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        /* 4. Przyciski (Linki) */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dekoracyjne kółka w tle dla wzmocnienia efektu glass */
+        .bg-circle {
+            position: fixed;
+            z-index: -1;
+            border-radius: 50%;
+            filter: blur(50px);
+        }
+        .circle-1 { width: 300px; height: 300px; background: #ff007f; top: 10%; left: 10%; }
+        .circle-2 { width: 250px; height: 250px; background: #00d4ff; bottom: 10%; right: 10%; }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+
+    <div class="glass-container">
+        <img src="https://via.placeholder.com/150" alt="Avatar" class="profile-img">
+        
+        <h1>Twoja Nazwa</h1>
+        <p>Krótki opis Twojej działalności ✨</p>
+
+        <div class="links">
+            <a href="#" class="link-item">Instagram</a>
+            <a href="#" class="link-item">TikTok</a>
+            <a href="#" class="link-item">Portfolio</a>
+            <a href="#" class="link-item">Sklep</a>
+        </div>
+    </div>
+
+</body>
+</html>
